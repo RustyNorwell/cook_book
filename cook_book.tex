@@ -32,6 +32,13 @@ a4paper,
 {% no implementation to display the section name instead
 }
 
+\newcommand{\fakesection}[1]{%
+  %\par\refstepcounter{section}% Increase section counter
+  \refstepcounter{section}% Increase section counter
+  \sectionmark{#1}% Add section mark (header)
+  \addcontentsline{toc}{section}{\protect\numberline{\thesection}#1}% Add section to ToC
+  % Add more content here, if needed.
+}
 
 \usepackage{hyperref}    % must be the last package
 \hypersetup{%
@@ -55,6 +62,7 @@ a4paper,
 	prephead = Postup,
 	inghead = Ingredience,
 	portionvalue = porce,
+	calory = Energetická hodnota,
 }
 
 \setRecipeLengths {
@@ -91,15 +99,15 @@ a4paper,
 
 %\include{tex/Complete_Recipe}
 
-\section{Hlavní chody}
+\fakesection{Hlavní chody}
 \include{recipes/kure_na_kari.tex}
 \include{recipes/hrnkove_knedliky.tex}
 \include{recipes/cesnekove_kure_se_zampiony_na_smetane.tex}
 
-\section{Pečivo}
+\fakesection{Pečivo}
 \include{recipes/rugbraud.tex}
 
-\section{Cukroví}
+\fakesection{Cukroví}
 \include{recipes/vanilkove_rohlicky.tex}
 
 \end{document}
