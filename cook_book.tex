@@ -10,6 +10,7 @@ a4paper,
 \usepackage{lmodern}
 %\usepackage{lm}
 \usepackage[czech, english]{babel}
+\usepackage[usenames,dvipsnames]{xcolor}
 
 \usepackage{nicefrac}
 
@@ -18,8 +19,6 @@ a4paper,
     %myconfig
 ]
 {xcookybooky}
-
-%\usepackage{blindtext}    % only needed for generating test text
 
 \DeclareRobustCommand{\textcelcius}{\ensuremath{^{\circ}\mathrm{C}}}
 
@@ -61,6 +60,13 @@ a4paper,
 \setRecipeLengths {
 	preparationwidth = 0.5 \textwidth ,
 	ingredientswidth = 0.4 \textwidth ,
+}
+
+\setRecipeColors {
+	recipename = Black,
+	numeration = DarkBlue,
+	prephead = Bittersweet,
+	inghead = Bittersweet,
 }
 
 \hbadness=10000	% Ignore underfull boxes
