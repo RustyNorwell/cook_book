@@ -19,7 +19,7 @@ a4paper,
 ]
 {xcookybooky}
 
-\usepackage{blindtext}    % only needed for generating test text
+%\usepackage{blindtext}    % only needed for generating test text
 
 \DeclareRobustCommand{\textcelcius}{\ensuremath{^{\circ}\mathrm{C}}}
 
@@ -67,20 +67,17 @@ a4paper,
 
 \begin{document}
 
-\title{Examples for using \textbf{xcookybooky}}
-\author{Sven Harder\\ \href{mailto:sven\_one1@gmx.de}{sven\_one1@gmx.de}}
+\title{Martinova kuchařka}
+\author{\href{martin.luther.jirousek@gmail.com}{Ing. Martin Jiroušek}}
 \maketitle
 
 \begin{abstract}
-    \noindent The examples in this document require at least version~1.4 of the \texttt{xcookybooky}\footnote{\url{http://www.ctan.org/pkg/xcookybooky}} package. For more examples and test recipes especially for using hook functions take a look at the source files located at \url{https://code.google.com/p/xcookybooky/}. If you are interested in modifying the layout of \texttt{xcookybooky} you will find examples in the documentation as well as in the configuration file \textbf{xcookybooky.cfg}.
+	Tato kuchařka vznikla jakožto kompilace mých oblíbených receptů a je primárně určená pro mé osobní použití. Při čtení textu mějte tento fakt na paměti a užívejte na vlastní nebezpečí.
 \end{abstract}
 
 \tableofcontents
 
 \vspace{5em}
-
-\section{Recepty}
-The following recipes are examples for the usage of the \texttt{xcookybooky} package. The copyright of the pictures is owned by Roman Gaus. If you are using MiKTeX~2.9 you should get no errors, no warnings and no overfull boxes. The underfull boxes are suppressed due to the settings.
 
 % background graphic
 %\setBackgroundPicture[x, y=-2cm, width=\paperwidth-4cm, height, orientation = pagecenter]
@@ -88,14 +85,15 @@ The following recipes are examples for the usage of the \texttt{xcookybooky} pac
 
 %\include{tex/Complete_Recipe}
 
+\section{Hlavní chody}
 \include{recipes/kure_na_kari.tex}
-
 \include{recipes/hrnkove_knedliky.tex}
-
-\include{recipes/vanilkove_rohlicky.tex}
-
 \include{recipes/cesnekove_kure_se_zampiony_na_smetane.tex}
 
+\section{Pečivo}
 \include{recipes/rugbraud.tex}
+
+\section{Cukroví}
+\include{recipes/vanilkove_rohlicky.tex}
 
 \end{document}
