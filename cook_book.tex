@@ -22,11 +22,10 @@ a4paper,
 
 \DeclareRobustCommand{\textcelcius}{\ensuremath{^{\circ}\mathrm{C}}}
 
-
 \setcounter{secnumdepth}{1}
 \renewcommand*{\recipesection}[2][]
 {%
-    \subsection[#1]{#2}
+    \subsubsection[#1]{#2}
 }
 \renewcommand{\subsectionmark}[1]
 {% no implementation to display the section name instead
@@ -42,10 +41,10 @@ a4paper,
 
 \usepackage{hyperref}    % must be the last package
 \hypersetup{%
-    pdfauthor            = {Sven Harder},
-    pdftitle             = {Example Recipes for xcookybooky},
+    pdfauthor            = {Martin Jiroušek},
+    pdftitle             = {Martin's Cook Book},
     pdfsubject           = {Recipes},
-    pdfkeywords          = {example, recipes, cookbook, xcookybooky},
+    pdfkeywords          = {example, cookbook},
     pdfstartview         = {FitV},
     pdfview              = {FitH},
     pdfpagemode          = {UseNone}, % Options; UseNone, UseOutlines
@@ -99,15 +98,18 @@ a4paper,
 
 %\include{tex/Complete_Recipe}
 
-\fakesection{Hlavní chody}
+\section{Hlavní chody}
+\subsection{Masové pokrmy}
 \include{recipes/kure_na_kari.tex}
-\include{recipes/hrnkove_knedliky.tex}
 \include{recipes/cesnekove_kure_se_zampiony_na_smetane.tex}
+\include{recipes/gulas.tex}
+\subsection{Bezmasé pokrmy}
+\include{recipes/hrnkove_knedliky.tex}
 
-\fakesection{Pečivo}
+\section{Pečivo}
 \include{recipes/rugbraud.tex}
 
-\fakesection{Cukroví}
+\section{Cukroví}
 \include{recipes/vanilkove_rohlicky.tex}
 
 \end{document}
